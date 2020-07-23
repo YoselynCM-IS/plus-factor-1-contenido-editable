@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body style="background-color: #DDD;">
+
+    <div id="contenedor">
+         <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/bg00001.jpg"/></nobr></div><p><span style="font-family:Helvetica;font-size:12.000000px;font-style:normal;font-weight:normal;color:#231F20;"><span style="position:absolute;top:1011.782227px;left:670.781250px"><nobr>Family ties </nobr></span></span></p><p><span style="font-family:Helvetica;font-size:16.000000px;font-weight:bold;color:#231F20;"><span style="position:absolute;top:1007.077576px;left:749.399536px"><nobr>53 </nobr></span></span></p><p><span style="font-family:Helvetica;font-size:10.000000px;font-weight:bold;color:#EE1D23;"><span style="position:absolute;top:80.923988px;left:425.611328px"><nobr>Expected Learning: <span style="font-style:normal;font-weight:normal;color:#231F20;">Practice adjectives to describe people. </span></nobr></span></span></p><p><span style="font-family:Helvetica;font-size:20.160000px;font-style:italic;font-weight:bold;color:#00AEEF;"><span style="position:absolute;top:134.655350px;left:139.917877px"><nobr>Learning Evidence </nobr></span></span></p><p><span style="font-family:Avenir;font-size:11.000000px;font-weight:bold;color:#EE1D23;"><span style="position:absolute;top:183.008301px;left:133.462982px"><nobr>I. <span style="color:#231F20;">Use the following space to draw your family tree. You can include as many members </span></nobr></span></span></p><p><span style="font-family:Avenir;font-size:11.000000px;font-weight:bold;color:#231F20;"><span style="position:absolute;top:201.685791px;left:156.150925px"><nobr>of your family as you want. You can paste some pictures. Do not limit your creativity. </nobr></span></span></p><p><span style="font-family:Helvetica;font-size:6.000000px;font-style:normal;font-weight:normal;color:#000000;"><span style="position:absolute;top:1081.684326px;left:52.261162px"><nobr></nobr></span></span></p>
+         <p>
+            <span style="font-family:Avenir;font-size:11.000000px;font-weight:bold;color:#EE1D23;">
+                <span style="position:absolute;top:631.171570px;left:133.462982px">
+                    <nobr>II. 
+                        <span style="color:#231F20;">Write your description and your daily routines. </span>
+                    </nobr>
+                </span>
+                </span>
+                <span style="position:absolute;top:652.542114px;left:155.954147px">
+                <nobr>
+                    <span >
+                        <textarea id="plus1_p53res1" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res3" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res4" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res5" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res6" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res7" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res8" style="margin: 0px; width: 516px; height: 15px;"></textarea>
+                    </span>
+                </nobr>
+            
+            </span>
+        </p>
+
+<p>
+    <span style="font-family:Avenir;font-size:11.000000px;font-weight:bold;color:#EE1D23;">
+        <span style="position:absolute;top:827.277466px;left:133.462982px">
+            <nobr>III. 
+                <span style="color:#231F20;">Write the descriptions and daily routines of two members of your family. </span>
+            </nobr>
+        </span>
+        </span>
+        <span style="position:absolute;top:847.945007px;left:159.756332px">
+            <nobr>
+                <span>
+                    <textarea id="plus1_p53res2" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res9" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res10" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res11" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res12" style="margin: 0px; width: 516px; height: 15px;"></textarea><br><textarea id="plus1_p53res13" style="margin: 0px; width: 516px; height: 15px;"></textarea>
+                </span>
+            </nobr>
+        </span>
+    
+</p> 
+         <form style="margin-top: 990px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post"><textarea style="display:none;" id="myInput" name = "imagen"></textarea><input type="button" onclick="save_data()" value="Save"  class="btn btn-primary">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" onclick="send_data(); loader(); return false" value="Send" class="btn btn-primary">    <input type="hidden" id="plus1_regNA" name="plus1_regNA">
+    <input type="hidden" id="plus1_regGP" name="plus1_regGP">
+    <input type="hidden" id="plus1_regCA" name="plus1_regCA">
+    <input type="hidden" id="plus1_regND" name="plus1_regND">
+    <input type="hidden" id="plus1_regCD" name="plus1_regCD"></form>  
+    </div>
+    <div id="loader" style="display:none; margin-top: 980px;margin-left: 190px; position: absolute; z-index: 2;">
+        <img src="../../img/carga.gif"  width="180px" height="65px">
+    </div>       
+</body>
+
+<script type="text/javascript">
+    document.getElementById('plus1_p53res1').value = localStorage.getItem('plus1_p53res1');
+    document.getElementById('plus1_p53res2').value = localStorage.getItem('plus1_p53res2');
+
+    document.getElementById('plus1_p53res3').value = localStorage.getItem('plus1_p53res3');
+    document.getElementById('plus1_p53res4').value = localStorage.getItem('plus1_p53res4');
+    document.getElementById('plus1_p53res5').value = localStorage.getItem('plus1_p53res5');
+    document.getElementById('plus1_p53res6').value = localStorage.getItem('plus1_p53res6');
+    document.getElementById('plus1_p53res7').value = localStorage.getItem('plus1_p53res7');
+    document.getElementById('plus1_p53res8').value = localStorage.getItem('plus1_p53res8');
+    document.getElementById('plus1_p53res9').value = localStorage.getItem('plus1_p53res9');
+    document.getElementById('plus1_p53res10').value = localStorage.getItem('plus1_p53res10');
+    document.getElementById('plus1_p53res11').value = localStorage.getItem('plus1_p53res11');
+    document.getElementById('plus1_p53res12').value = localStorage.getItem('plus1_p53res12');
+    document.getElementById('plus1_p53res13').value = localStorage.getItem('plus1_p53res13');
+
+    //datos del registro
+    document.getElementById('plus1_regNA').value = localStorage.getItem('plus1_regNA');
+    document.getElementById('plus1_regGP').value = localStorage.getItem('plus1_regGP');
+    document.getElementById('plus1_regCA').value = localStorage.getItem('plus1_regCA');
+    document.getElementById('plus1_regND').value = localStorage.getItem('plus1_regND');
+    document.getElementById('plus1_regCD').value = localStorage.getItem('plus1_regCD');
+
+    function save_data(){
+        var plus1_p53res1 = document.getElementById('plus1_p53res1').value;
+        localStorage.setItem('plus1_p53res1', plus1_p53res1);
+        var plus1_p53res2 = document.getElementById('plus1_p53res2').value;
+        localStorage.setItem('plus1_p53res2', plus1_p53res2);
+
+        var plus1_p53res3 = document.getElementById('plus1_p53res3').value;
+        localStorage.setItem('plus1_p53res3', plus1_p53res3);
+        var plus1_p53res4 = document.getElementById('plus1_p53res4').value;
+        localStorage.setItem('plus1_p53res4', plus1_p53res4);
+        var plus1_p53res5 = document.getElementById('plus1_p53res5').value;
+        localStorage.setItem('plus1_p53res5', plus1_p53res5);
+        var plus1_p53res6 = document.getElementById('plus1_p53res6').value;
+        localStorage.setItem('plus1_p53res6', plus1_p53res6);
+        var plus1_p53res7 = document.getElementById('plus1_p53res7').value;
+        localStorage.setItem('plus1_p53res7', plus1_p53res7);
+        var plus1_p53res8 = document.getElementById('plus1_p53res8').value;
+        localStorage.setItem('plus1_p53res8', plus1_p53res8);
+        var plus1_p53res9 = document.getElementById('plus1_p53res9').value;
+        localStorage.setItem('plus1_p53res9', plus1_p53res9);
+        var plus1_p53res10 = document.getElementById('plus1_p53res10').value;
+        localStorage.setItem('plus1_p53res10', plus1_p53res10);
+        var plus1_p53res11 = document.getElementById('plus1_p53res11').value;
+        localStorage.setItem('plus1_p53res11', plus1_p53res11);
+        var plus1_p53res12 = document.getElementById('plus1_p53res12').value;
+        localStorage.setItem('plus1_p53res12', plus1_p53res12);
+        var plus1_p53res13 = document.getElementById('plus1_p53res13').value;
+        localStorage.setItem('plus1_p53res13', plus1_p53res13);
+
+        alert("Saved correctly");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+</script>
+
+</html>

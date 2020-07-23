@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+		<span style="position: absolute; top: 639px; left: 170px">
+			<input type="checkbox" id="plus1_p102res1">
+		</span>
+      <span style="position: absolute; top: 658px; left: 170px">
+			<input type="checkbox" id="plus1_p102res2">
+	   </span>
+       <span style="position: absolute; top: 676px; left: 170px">
+			<input type="checkbox" id="plus1_p102res3">
+		</span>
+       <!-- -->
+      <span style="position: absolute; top: 715px; left: 170px">
+			<input type="checkbox" id="plus1_p102res4">
+	   </span>
+      <span style="position: absolute; top: 732px; left: 170px">
+			<input type="checkbox" id="plus1_p102res5">
+	   </span>
+       <span style="position: absolute; top: 750px; left: 170px">
+			<input type="checkbox" id="plus1_p102res6">
+		</span>
+       
+       <span style="position: absolute; top: 788px; left: 170px">
+			<input type="checkbox" id="plus1_p102res7">
+	   </span>
+      <span style="position: absolute; top: 805px; left: 170px">
+			<input type="checkbox" id="plus1_p102res8">
+	   </span>
+       <span style="position: absolute; top: 827px; left: 170px">
+			<input type="checkbox" id="plus1_p102res9">
+		</span>
+       
+       
+       <span style="position: absolute; top: 864px; left: 170px">
+			<input type="checkbox" id="plus1_p102res10">
+	   </span>
+      <span style="position: absolute; top: 882px; left: 170px">
+			<input type="checkbox" id="plus1_p102res11">
+	   </span>
+       <span style="position: absolute; top: 900px; left: 170px">
+			<input type="checkbox" id="plus1_p102res12">
+		</span>
+       
+       
+       
+       <span style="position: absolute; top: 936px; left: 170px">
+			<input type="checkbox" id="plus1_p102res13">
+	   </span>
+      <span style="position: absolute; top: 954px; left: 170px">
+			<input type="checkbox" id="plus1_p102res14">
+	   </span>
+       <span style="position: absolute; top: 974px; left: 170px">
+			<input type="checkbox" id="plus1_p102res15">
+		</span>
+
+      <form style="margin-top: 1000px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+        <textarea style="display:none;" id="myInput" name = "imagen"></textarea>
+        <input type="button" onclick="save_data()" value="Save"  class="btn btn-primary">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" onclick="send_data(); loader(); return false" value="Send" class="btn btn-primary"> 
+        <input type="hidden" id="plus1_regNA" name="plus1_regNA">
+        <input type="hidden" id="plus1_regGP" name="plus1_regGP">
+        <input type="hidden" id="plus1_regCA" name="plus1_regCA">
+        <input type="hidden" id="plus1_regND" name="plus1_regND">
+        <input type="hidden" id="plus1_regCD" name="plus1_regCD">
+      </form>
+
+      <div id="loader" style="display:none; margin-top: 990px;margin-left: 190px; position: absolute; z-index: 2;">
+        <img src="../../img/carga.gif"  width="180px" height="65px">
+      </div>
+        <!--Fin del contenido-->
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('plus1_regNA').value = localStorage.getItem('plus1_regNA');
+    document.getElementById('plus1_regGP').value = localStorage.getItem('plus1_regGP');
+    document.getElementById('plus1_regCA').value = localStorage.getItem('plus1_regCA');
+    document.getElementById('plus1_regND').value = localStorage.getItem('plus1_regND');
+    document.getElementById('plus1_regCD').value = localStorage.getItem('plus1_regCD');
+
+    document.getElementById('plus1_p102res1').value = localStorage.getItem('plus1_p102res1');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    //comprobar si el valor es 1 se selecciona 
+    if(document.getElementById('plus1_p102res1').value == "1")
+        document.getElementById("plus1_p102res1").checked = true; // si es uno se activa en checkbox
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus1_p102res2').value = localStorage.getItem('plus1_p102res2');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res2').value == "1")
+        document.getElementById("plus1_p102res2").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus1_p102res3').value = localStorage.getItem('plus1_p102res3');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res3').value == "1")
+        document.getElementById("plus1_p102res3").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus1_p102res4').value = localStorage.getItem('plus1_p102res4');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res4').value == "1")
+        document.getElementById("plus1_p102res4").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('plus1_p102res5').value = localStorage.getItem('plus1_p102res5');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res5').value == "1")
+        document.getElementById("plus1_p102res5").checked = true; 
+
+    document.getElementById('plus1_p102res6').value = localStorage.getItem('plus1_p102res6');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res6').value == "1")
+        document.getElementById("plus1_p102res6").checked = true; 
+
+    document.getElementById('plus1_p102res7').value = localStorage.getItem('plus1_p102res7');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res7').value == "1")
+        document.getElementById("plus1_p102res7").checked = true; 
+
+    document.getElementById('plus1_p102res8').value = localStorage.getItem('plus1_p102res8');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res8').value == "1")
+        document.getElementById("plus1_p102res8").checked = true; 
+
+    document.getElementById('plus1_p102res9').value = localStorage.getItem('plus1_p102res9');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res9').value == "1")
+        document.getElementById("plus1_p102res9").checked = true; 
+
+    document.getElementById('plus1_p102res10').value = localStorage.getItem('plus1_p102res10');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res10').value == "1")
+        document.getElementById("plus1_p102res10").checked = true; 
+
+    document.getElementById('plus1_p102res11').value = localStorage.getItem('plus1_p102res11');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res11').value == "1")
+        document.getElementById("plus1_p102res11").checked = true; 
+
+    document.getElementById('plus1_p102res12').value = localStorage.getItem('plus1_p102res12');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res12').value == "1")
+        document.getElementById("plus1_p102res12").checked = true; 
+
+    document.getElementById('plus1_p102res13').value = localStorage.getItem('plus1_p102res13');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res13').value == "1")
+        document.getElementById("plus1_p102res13").checked = true; 
+
+    document.getElementById('plus1_p102res14').value = localStorage.getItem('plus1_p102res14');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res14').value == "1")
+        document.getElementById("plus1_p102res14").checked = true; 
+
+    document.getElementById('plus1_p102res15').value = localStorage.getItem('plus1_p102res15');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('plus1_p102res15').value == "1")
+        document.getElementById("plus1_p102res15").checked = true; 
+
+    function save_data(){
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        //verificar si el check esta seleccionado se asigna un 1 para activarlo al momento de cargar
+        var isChecked = document.getElementById('plus1_p102res1').checked;
+        // si esta seleccionado se asigna bandera 1
+        if(isChecked){
+            var plus1_p102res1 = "1";
+        }
+        localStorage.setItem('plus1_p102res1', plus1_p102res1);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res2').checked;
+        if(isChecked){
+            var plus1_p102res2 = "1";
+        }    
+        localStorage.setItem('plus1_p102res2', plus1_p102res2);
+        console.log("plus1_p102res2",plus1_p102res2);
+        //** FIN PARA GUARDAR CHECKBOX **//
+        
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res3').checked;
+        if(isChecked){
+            var plus1_p102res3 = "1";
+        }    
+        localStorage.setItem('plus1_p102res3', plus1_p102res3);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res4').checked;
+        if(isChecked){
+            var plus1_p102res4 = "1";
+        }    
+        localStorage.setItem('plus1_p102res4', plus1_p102res4);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res5').checked;
+        if(isChecked){
+            var plus1_p102res5 = "1";
+        }    
+        localStorage.setItem('plus1_p102res5', plus1_p102res5);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res6').checked;
+        if(isChecked){
+            var plus1_p102res6 = "1";
+        }    
+        localStorage.setItem('plus1_p102res6', plus1_p102res6);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res7').checked;
+        if(isChecked){
+            var plus1_p102res7 = "1";
+        }    
+        localStorage.setItem('plus1_p102res7', plus1_p102res7);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res8').checked;
+        if(isChecked){
+            var plus1_p102res8 = "1";
+        }    
+        localStorage.setItem('plus1_p102res8', plus1_p102res8);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res9').checked;
+        if(isChecked){
+            var plus1_p102res9 = "1";
+        }    
+        localStorage.setItem('plus1_p102res9', plus1_p102res9);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res10').checked;
+        if(isChecked){
+            var plus1_p102res10 = "1";
+        }    
+        localStorage.setItem('plus1_p102res10', plus1_p102res10);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res11').checked;
+        if(isChecked){
+            var plus1_p102res11 = "1";
+        }    
+        localStorage.setItem('plus1_p102res11', plus1_p102res11);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res12').checked;
+        if(isChecked){
+            var plus1_p102res12 = "1";
+        }    
+        localStorage.setItem('plus1_p102res12', plus1_p102res12);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res13').checked;
+        if(isChecked){
+            var plus1_p102res13 = "1";
+        }    
+        localStorage.setItem('plus1_p102res13', plus1_p102res13);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res14').checked;
+        if(isChecked){
+            var plus1_p102res14 = "1";
+        }    
+        localStorage.setItem('plus1_p102res14', plus1_p102res14);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('plus1_p102res15').checked;
+        if(isChecked){
+            var plus1_p102res15 = "1";
+        }    
+        localStorage.setItem('plus1_p102res15', plus1_p102res15);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        alert("Saved correctly");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>
